@@ -171,6 +171,12 @@ This is the amount of memory you need for the job. Assemblers often require a hi
 #This is the file name created from the standard error of the job in the folder in which you ran the script.
 
 ```
+For quick running jobs you can start interactive sessions specifying resources with the same flags as the earlier bash script. It is a good idea to do this before running any commands on the cluster to avoid running things on the head node.
+
+```
+srun --pty --qos=general --partition=general --mem=1G bash
+```
+
 Much more information about the Xanadu resource can be found online [here](https://bioinformatics.uconn.edu/resources-and-events/tutorials-2/xanadu/)
 
 Create a script named test.sh with the following text using **nano test.sh**:
